@@ -1,46 +1,20 @@
 import React from 'react';
 import "./App.css";
+import Posts from './components/Posts';
+import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 function App() {
   return (
     <main>
-      <header>
-        <a href='' className='logo'>Blog App</a>
-        <nav>
-          <a href=''>Login</a>
-          <a href=''>Register</a>
-        </nav>
-      </header>
-      <div className='post'>
-        <div className='post-image'> <img src='https://techcrunch.com/wp-content/uploads/2024/02/cake-kalk-motorcycle.jpg?w=1390&crop=1' />
-        </div>
-        <div className='post-texts'><h2>Boutique e-motorcycle startup Cake files for bankruptcy</h2>
-          <div className='publisher-info'>
-            -- Pingaksh Pareek at 12:00:00 AM 4 Feb 2024
-          </div>
-          <p className='summary'>The Swedish company was in the middle of a funding round, just prior to the filing, but apparently the withdrawal of an investor was what tipped the company over the edge, according to Swedish media reports. Ytterborn declined to comment on what will happen next. While it’s unclear if Cake filed for bankruptcy protection or insolvency, Ytterborn did tell media outlet Dagens Industri that he had nothing else “in mind but to find a solution in one format or another.” His comments suggest the company filed for protection.</p>
-        </div>
-      </div>
-      <div className='post'>
-        <div className='post-image'> <img src='https://techcrunch.com/wp-content/uploads/2024/02/cake-kalk-motorcycle.jpg?w=1390&crop=1' />
-        </div>
-        <div className='post-texts'><h2>Boutique e-motorcycle startup Cake files for bankruptcy</h2>
-          <div className='publisher-info'>
-            -- Pingaksh Pareek at 12:00:00 AM 4 Feb 2024
-          </div>
-          <p className='summary'>The Swedish company was in the middle of a funding round, just prior to the filing, but apparently the withdrawal of an investor was what tipped the company over the edge, according to Swedish media reports. Ytterborn declined to comment on what will happen next. While it’s unclear if Cake filed for bankruptcy protection or insolvency, Ytterborn did tell media outlet Dagens Industri that he had nothing else “in mind but to find a solution in one format or another.” His comments suggest the company filed for protection.</p>
-        </div>
-      </div>
-      <div className='post'>
-        <div className='post-image'> <img src='https://techcrunch.com/wp-content/uploads/2024/02/cake-kalk-motorcycle.jpg?w=1390&crop=1' />
-        </div>
-        <div className='post-texts'><h2>Boutique e-motorcycle startup Cake files for bankruptcy</h2>
-          <div className='publisher-info'>
-            -- Pingaksh Pareek at 12:00:00 AM 4 Feb 2024
-          </div>
-          <p className='summary'>The Swedish company was in the middle of a funding round, just prior to the filing, but apparently the withdrawal of an investor was what tipped the company over the edge, according to Swedish media reports. Ytterborn declined to comment on what will happen next. While it’s unclear if Cake filed for bankruptcy protection or insolvency, Ytterborn did tell media outlet Dagens Industri that he had nothing else “in mind but to find a solution in one format or another.” His comments suggest the company filed for protection.</p>
-        </div>
-      </div>
+      <Routes>
+        <Route path='/login' element={<Login />} />
+        <Route path='signup' element={<Signup />} />
+      </Routes>
+      <Header />
+      <Posts />
     </main>
   );
 }

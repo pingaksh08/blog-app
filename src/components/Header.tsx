@@ -1,12 +1,13 @@
 import React from 'react';
 import Login from './Login';
 import Signup from './Signup';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <>
             <header>
-                <a href='' className='logo'>Blog App</a>
+                <Link to={"/"} className='logo'>Blog App</Link>
                 <nav>
                     <Login />
                     <Signup />

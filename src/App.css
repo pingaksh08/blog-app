@@ -35,7 +35,7 @@ img {
 
 .post {
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
+  grid-template-columns: .7fr 1.3fr;
   gap: 20px;
   margin-bottom: 20px;
 }
